@@ -1,0 +1,26 @@
+Revision history for GCC-Builtins
+
+0.01    2024/03/19 - 15:00
+        First version, released on an unsuspecting world.
+
+0.02    2024/03/19 - 22:00
+        Added a few more builtins.
+        Fixed pod.
+
+0.03    2024/03/20 - 02:00
+        Added more builtins.
+        Added one test file for each builtin function supported.
+        Created benchmarks comparing clz() XS vs PP.
+        Enhanced documentation.
+
+0.04    2024/03/20 - 22:00
+        There are now 36 GCC Builtins functions exported and readily available to Perl.
+
+0.05    2024/04/12 - 13:00
+        Changed the test files > 666-*.t so that it attempts to detect if expected result is a number. If it is, then expected and returned results are checked on their abs difference being less than a small number, instead of comparing their equality.
+
+0.06    2024/08/26 - 20:00
+        In some systems (e.g. perl 5.12.5) expected 'Inf' or 'NaN' return values from a GCC builtin yield lower-case 'inf' and 'nan', failing the test. So, test files comparing expected and yielded values lower-case the "comparees" before the comparison.
+	Added to the documentation.
+
+
